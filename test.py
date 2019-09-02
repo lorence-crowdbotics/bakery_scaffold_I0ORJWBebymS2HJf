@@ -12,6 +12,7 @@ class TestAcceptanceStripe(unittest.TestCase):
         """Check if Stripe key was defined."""
         pattern = re.compile(r"Stripe\('pk_test_\w{24}'\);", re.I | re.M)
         res = re.search(pattern, self.dom_str)
+        # test
         self.assertTrue(res.group())
 
 
